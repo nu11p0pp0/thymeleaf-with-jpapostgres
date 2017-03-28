@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>project_info</title>
+</head>
+<body>
+	<p>こんにちは。</p>
+	<p th:text="${result}" />
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>版</th>
+				<th>名称</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="result : ${results}">
+				<td th:text="${result.id.seq}">SEQ</td>
+				<td th:text="${result.id.editno}">版</td>
+				<td th:text="${result.name}">名</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
